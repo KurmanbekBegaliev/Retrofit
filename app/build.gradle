@@ -58,4 +58,7 @@ dependencies {
     //OkHttpLogging
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
 
+    //ViewModel delegates
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+
 }

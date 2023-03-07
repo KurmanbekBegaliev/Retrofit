@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.retrofit.BundleKeys.KEY_FOR_BUNDLE
 import com.example.retrofit.CalculateModel
 import com.example.retrofit.databinding.FragmentResultBinding
 
@@ -27,7 +28,7 @@ class ResultFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val model = arguments?.getSerializable(InputFragment.KEY_FOR_BUNDLE) as CalculateModel
+        val model = arguments?.getSerializable(KEY_FOR_BUNDLE) as CalculateModel
 
         binding.tvFirstName.text = model.firstName
         binding.tvSecondName.text = model.secondName
