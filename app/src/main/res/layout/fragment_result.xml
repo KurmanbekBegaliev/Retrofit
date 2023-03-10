@@ -6,7 +6,7 @@
     android:paddingVertical="20dp"
     android:paddingHorizontal="12dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.ResultFragment">
+    tools:context=".ui.fragment.ResultFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -27,14 +27,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:contentDescription="TODO" />
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_first_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Me"
+                android:text="@string/me"
                 android:textSize="24sp"
                 app:layout_constraintTop_toBottomOf="@id/img_second"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="❤"
+                android:text="@string/love"
                 android:textSize="24sp"
                 app:layout_constraintTop_toBottomOf="@id/tv_first_name"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
                 android:id="@+id/tv_second_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="You"
+                android:text="@string/you"
                 android:layout_marginTop="2dp"
                 android:textSize="24sp"
                 app:layout_constraintTop_toBottomOf="@id/tv_heart"
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Your Score"
+                android:text="@string/your_score"
                 android:textSize="26sp"
                 android:textColor="#FF7186"
                 app:layout_constraintTop_toBottomOf="@id/tv_second_name"

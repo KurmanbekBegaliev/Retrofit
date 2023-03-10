@@ -2,4 +2,15 @@
     <string name="app_name">Retrofit</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="you_should_take_the_time_to_help_those_n_who_need_you">You should take the time to help those\n who need you</string>
+    <string name="get_started">Get Started</string>
+    <string name="have_a_good_time">Have a good time</string>
+    <string name="todo">TODO</string>
+    <string name="first_name">First Name</string>
+    <string name="me">Me</string>
+    <string name="second_name">Second Name</string>
+    <string name="you">You</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="love">❤</string>
+    <string name="your_score">Your Score</string>
 </resources>

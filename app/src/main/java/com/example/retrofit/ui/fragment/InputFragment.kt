@@ -1,4 +1,4 @@
-package com.example.retrofit.fragment
+package com.example.retrofit.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,17 +8,24 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.retrofit.ActivityViewModel
-import com.example.retrofit.BundleKeys.KEY_FOR_BUNDLE
+import com.example.retrofit.ui.BundleKeys.KEY_FOR_BUNDLE
 import com.example.retrofit.CalculateModel
 import com.example.retrofit.R
 import com.example.retrofit.databinding.FragmentInputBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class InputFragment : Fragment() {
 
     private var _binding: FragmentInputBinding? = null
     private val binding get() = _binding!!
     private val viewModel: ActivityViewModel by viewModels()
+
+//    @Inject
+//    @HiltModule.StringBuilderOne
+//    lateinit var str : java.lang.StringBuilder
+
 
 
     override fun onCreateView(
@@ -34,6 +41,11 @@ class InputFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         onClick()
+
+//        Log.d("TAG", "InputFragment: $str")
+//        str.append("Good Luck")
+//        Log.d("TAG", "InputFragment: $str")
+
     }
 
     private fun onClick() = with(binding) {
@@ -47,29 +59,6 @@ class InputFragment : Fragment() {
         }
 
     }
-
-//    private fun makeRequest() {
-//        App.api.getPercentage(
-//            firstName = binding.edtFirstName.text.toString(),
-//            secondName = binding.edtSecondName.text.toString()
-//        ).enqueue(
-//            object: Callback<CalculateModel> {
-//                override fun onResponse(
-//                    call: Call<CalculateModel>,
-//                    response: Response<CalculateModel>
-//                ) {
-//                    binding.edtFirstName.setText("")
-//                    binding.edtSecondName.setText("")
-//                    response.body()?.let { openResult(it) }
-//                }
-//
-//                override fun onFailure(call: Call<CalculateModel>, t: Throwable) {
-//                    Toast.makeText(requireContext(), "${t.stackTrace}", Toast.LENGTH_SHORT).show()
-//                }
-//
-//            }
-//        )
-//    }
 
     private fun openResult(model: CalculateModel) {
         binding.edtFirstName.setText("")

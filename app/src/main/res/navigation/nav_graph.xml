@@ -7,12 +7,17 @@
 
     <fragment
         android:id="@+id/inputFragment"
-        android:name="com.example.retrofit.fragment.InputFragment"
+        android:name="com.example.retrofit.ui.fragment.InputFragment"
         android:label="fragment_input"
         tools:layout="@layout/fragment_input" />
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.retrofit.fragment.ResultFragment"
+        android:name="com.example.retrofit.ui.fragment.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.example.retrofit.ui.fragment.onboarding.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" />
 </navigation>
