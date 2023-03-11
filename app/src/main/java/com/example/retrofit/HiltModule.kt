@@ -2,6 +2,7 @@ package com.example.retrofit
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.retrofit.utils.Prefs
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -52,6 +53,9 @@ class HiltModule {
         return context.getSharedPreferences("prefs_name", Context.MODE_PRIVATE)
     }
 
+    @Provides
+    fun providePrefs(sharedPreferences: SharedPreferences) =
+        Prefs(sharedPreferences)
 
 //    @Provides
 //    @StringBuilderOne

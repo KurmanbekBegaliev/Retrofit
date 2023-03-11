@@ -11,7 +11,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.retrofit.ActivityViewModel
 import com.example.retrofit.R
 import com.example.retrofit.databinding.FragmentOnBoardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OnBoardFragment : Fragment(), OnBoardListener {
 
     private var _binding: FragmentOnBoardBinding? = null
@@ -78,8 +80,8 @@ class OnBoardFragment : Fragment(), OnBoardListener {
     }
 
     override fun onGetStartClicked() {
-        findNavController().navigateUp()
         viewModel.setHaveSeenOnBoarding()
+        findNavController().navigateUp()
 
     }
 
