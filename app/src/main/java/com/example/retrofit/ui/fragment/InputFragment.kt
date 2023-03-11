@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.retrofit.ActivityViewModel
-import com.example.retrofit.ui.BundleKeys.KEY_FOR_BUNDLE
 import com.example.retrofit.CalculateModel
 import com.example.retrofit.R
 import com.example.retrofit.databinding.FragmentInputBinding
+import com.example.retrofit.ui.BundleKeys.KEY_FOR_BUNDLE
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -20,7 +20,9 @@ class InputFragment : Fragment() {
 
     private var _binding: FragmentInputBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ActivityViewModel by viewModels()
+    private val viewModel: ActivityViewModel by lazy {
+        ViewModelProvider(this)[ActivityViewModel::class.java]
+    }
 
 //    @Inject
 //    @HiltModule.StringBuilderOne
